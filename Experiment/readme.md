@@ -1,0 +1,1 @@
+- `SKINNY_DFA_exp.cpp`: the code to generate 1000 samples of the MITM DFA experiment on SKINNY-128-128 and output a txt file about the number of remaining subkey values after the MITM filter 1, 2 and 3 . Use the command `g++ SKINNY_DFA_exp.cpp` to generate a `.exe` file and run it.
