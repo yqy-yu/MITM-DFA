@@ -1,2 +1,0 @@
--- `QARMA-MITM-DFA/`: the codes to generate MILP model for the MITM DFA on QARMA-64(-128) and search for solution. Use the command `gurobi.sh QARMA_Fault.py` to run.
-- `solutiontotikz/`: the codes to generate tikz picture of the searching result. Use the command `python qarma_tikz.py` to run.
