@@ -1,0 +1,390 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns}
+\usetikzlibrary{crypto.symbols}
+\tikzset{shadows=no} 
+\definecolor{orange}{rgb}{1,0.6,0.2}
+\definecolor{blue}{rgb}{0,0.4,0.8}
+\definecolor{red}{rgb}{0.9,0,0.4}
+\definecolor{gray}{rgb}{0.7,0.7,0.7}
+\definecolor{darkgreen}{rgb}{0,0.4,0.4}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+
+\everymath{\scriptstyle}
+\tikzset{edge/.style=->, arrow head=1pt};
+\begin{scope}[yshift=20cm]
+   \begin{scope}[xshift=-1cm]
+\path (4,-0.5) node {\tiny round $R-4$};
+\draw[->] (2,1.5) -- ++(1,0);
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SB} +(0,0);
+\draw(1,0) node {$X_{R-4}$};
+  \draw[fill=white] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=20cm]
+   \begin{scope}[xshift=2cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SC} +(0,0);
+\draw[->] (2,1.5) -- ++(1,0);
+\draw(1,0) node {$Y_{R-4}$};
+  \draw[fill=white] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=20cm]
+   \begin{scope}[xshift=5cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt MC} +(0,0);
+\draw[->] (2,1.5) -- ++(1,0);
+\draw(1,0) node {$Z_{R-4}$};
+  \draw[fill=white] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=16cm]
+   \begin{scope}[xshift=-10cm]
+\path (4,-0.5) node {\tiny round $R-3$};
+\draw[->] (2,1.5) -- ++(1,0);
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SB} +(0,0);
+\draw(1,0) node {$X_{R-3}$};
+  \draw[fill=white] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=16cm]
+   \begin{scope}[xshift=-7cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SC} +(0,0);
+\draw[->] (2,1.5) -- ++(1,0);
+\draw(1,0) node {$Y_{R-3}$};
+  \draw[fill=white] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=16cm]
+   \begin{scope}[xshift=-4cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt MC} +(0,0);
+\draw[->] (2,1.5) -- ++(1,0);
+\draw(1,0) node {$Z_{R-3}$};
+  \draw[fill=white] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=16cm]
+   \begin{scope}[xshift=-1cm]
+\path (4,-0.5) node {\tiny round $R-2$};
+\draw[->] (2,1.5) -- ++(1,0);
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SB} +(0,0);
+\draw(1,0) node {$X_{R-2}$};
+  \draw[fill=gray] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=16cm]
+   \begin{scope}[xshift=2cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SC} +(0,0);
+\draw[->] (2,1.5) -- ++(1,0);
+\draw(1,0) node {$Y_{R-2}$};
+  \draw[fill=gray] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=16cm]
+   \begin{scope}[xshift=5cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt MC} +(0,0);
+\draw[->] (2,1.5) -- ++(1,0);
+\draw(1,0) node {$Z_{R-2}$};
+  \draw[fill=gray] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=white] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=9cm]
+   \begin{scope}[xshift=-10cm]
+\path (4,-0.5) node {\tiny round $R-1$};
+\draw[->] (3,1.5) -- ++(-1,0);
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SB} +(0,0);
+\draw(1,0) node {$X_{R-1}$};
+  \draw[fill=gray] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=blue] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=red] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=9cm]
+   \begin{scope}[xshift=-7cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt SC} +(0,0);
+\draw[->] (3,1.5) -- ++(-1,0);
+\draw(1,0) node {$Y_{R-1}$};
+  \draw[fill=gray] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=blue] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=red] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,0.5) rectangle +(0.5,0.5);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=12cm]
+   \begin{scope}[xshift=-4cm]
+\draw (2.5,1.5) node{\tiny {$K_0$}};
+\draw (1,0) node{\tiny $\oplus$};
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=blue] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=red] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (1.5,0.5) rectangle +(0.5,0.5);
+\draw[line width =1pt] (0,0.5) rectangle +(2,2);
+	\end{scope}
+    \end{scope}
+\begin{scope}[yshift=9cm]
+   \begin{scope}[xshift=-4cm]
+\draw[thin] (2.5,1.5) -- node[above] {\tiny \tt MC} +(0,0);
+\draw[->] (3,1.5) -- ++(-1,0);
+\path (7,-0.5) node {\tiny round $R0$};
+\draw(1,0) node {$Z_{R-1}$};
+  \draw[fill=gray] (0.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=blue] (0.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (0.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=red] (1.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (1.5,0.5) rectangle +(0.5,0.5);
+\draw(4,0) node {$X_{R0}$};
+\draw[thin] (5.5,1.5) -- node[above] {\tiny \tt SB} +(0,0);
+\draw[->] (6,1.5) -- ++(-1,0);
+  \draw[fill=gray] (3.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=blue] (3.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=red] (4.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (4.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (3.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (3.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=red] (4.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (4.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (3.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=blue] (3.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=red] (4.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (4.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (3.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=blue] (3.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (4.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (4.5,0.5) rectangle +(0.5,0.5);
+\draw(7,0) node {\tiny \tt ciphertext};
+  \draw[fill=gray] (6.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.0,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.5,2.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.0,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.5,1.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.0,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.5,1.0) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (6.5,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.0,0.5) rectangle +(0.5,0.5);
+  \draw[fill=gray] (7.5,0.5) rectangle +(0.5,0.5);
+\draw (9,4.5) node{\tiny {$K_0 \oplus K_1$}};
+\draw (7,3) node{\tiny $\oplus$};
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (6.0,5.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=blue] (6.5,5.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=red] (7.0,5.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (7.5,5.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (6.0,4.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (6.5,4.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=red] (7.0,4.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (7.5,4.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (6.0,4.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=blue] (6.5,4.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=red] (7.0,4.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (7.5,4.0) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (6.0,3.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,fill=blue] (6.5,3.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (7.0,3.5) rectangle +(0.5,0.5);
+  \draw[draw=gray!80,pattern = north west lines, pattern color = darkgreen] (7.5,3.5) rectangle +(0.5,0.5);
+\draw[line width =1pt] (6,3.5) rectangle +(2,2);
+	\end{scope}
+    \end{scope}
+\begin{scope}[shift={(-3,5)}]
+\draw[fill=gray]  (-7,0) rectangle ++(0.5,0.5);
+\draw (-4.5,0.25) node {\small\tt Active Cell};
+\draw[fill=white] (-1,0) rectangle ++(0.5,0.5);
+\draw (1.5,0.25) node {\small\tt Inactive Cell};
+\draw[fill=blue]  (6,0) rectangle ++(0.5,0.5);
+\draw[fill=red]  (7,0) rectangle ++(0.5,0.5);\draw (11,0.25 ) node {\small\tt Value need to be guessed};
+\draw[fill=orange]  (17.5,0) rectangle ++(0.5,0.5);
+\draw (22,0.25) node {\small\tt Guessed in each direction};
+\end{scope}
+  \end{tikzpicture}
+\end{document}

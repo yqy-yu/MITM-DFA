@@ -1,0 +1,2 @@
+- `SKINNY-MITM_DFA/`: the codes to generate MILP model for the MITM DFA on SKINNY-128-128 and search for solution. Use the command `gurobi.sh SKINNY_Fault.py` to run.
+- `solutiontotikz/`: the codes to generate tikz picture of the searching result. Use the command `python skinny_tikz.py` to run.

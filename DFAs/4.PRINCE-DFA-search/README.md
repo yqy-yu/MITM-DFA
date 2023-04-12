@@ -1,0 +1,2 @@
+- `PRINCE-MITM-DFA/`: the codes to generate MILP model for the MITM DFA on PRINCE(v2) and search for solution. Use the command `gurobi.sh PRINCE_Fault.py` to run.
+- `solutiontotikz/`: the codes to generate tikz picture of the searching result. Use the command `python prince_tikz.py` to run.
